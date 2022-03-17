@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 
 // { supabase } is a const we created in /utils/supabaseClient
 import { supabase } from "../utils/supabaseClient";
+import Avatar from "./Avatar";
 
 // { session } is a prop, that is passed when Account() is called
 export default function Account({ session }) {
@@ -112,6 +113,15 @@ export default function Account({ session }) {
 
    return( 
       <div className="form-widget">
+
+         <Avatar 
+            url={avatar_url}
+            size={150}
+            onUpload={(url) => {
+               setAvatar_url(url)
+               updateProfile({ username, website, avatar_url: url })
+            }}
+         />
 
          {/* Input field for email */}
          <div>
