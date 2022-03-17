@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>SB User Management</title>
-        <link rel="icon" href="favicon.ico" />
+        <link rel="icon" href="favico.ico" />
       </Head>
       <Component {...pageProps} />
     </>
